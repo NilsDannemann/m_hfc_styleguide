@@ -1,0 +1,26 @@
+// Loader
+svg path,
+svg rect {
+	fill: $color-brand;
+}
+@keyframes textLoader{
+	0%{background-position: -468px 0}
+	100%{background-position: 468px 0}
+}
+.loader-text {
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: infinite;
+	animation-name: textLoader;
+	animation-timing-function: linear;
+	background: $color-grey;
+	background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+	background-size: 800px 104px;
+	position: relative;
+	
+	&__paragraph {
+		height: $font-size - 2;
+		width: $whitespace * 7;
+		margin: $whitespace/4 0 ($font-size / $line-height) 0;
+	}
+}

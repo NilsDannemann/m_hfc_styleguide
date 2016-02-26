@@ -1,0 +1,15 @@
+@import '{}/client/lib/styles/normalize';
+@import '{}/client/lib/styles/config';
+@import '{}/client/lib/styles/mixins';
+@import '{}/client/lib/styles/base';
+@import '{}/client/lib/styles/typography';
+
+// Layout
+@import '{}/client/layouts/layout_app/layout_app';
+
+// Components - Core
+@import '{}/client/components/core/loader/loader';
+
+// Components - Layout
+@import '{}/client/components/nav_main/nav_main';
+@import '{}/client/components/content_main/content_main';
