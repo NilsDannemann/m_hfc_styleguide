@@ -1,0 +1,11 @@
+<template name="smartcomponent">
+	{{#if Template.subscriptionsReady}}
+		<div class="smartcomponent">
+			smartcomponent
+		</div>
+	{{else}}
+		{{> loader_text width=100}}
+		{{> loader_circle}}
+		{{> loader_bar}}
+	{{/if}}
+</template>

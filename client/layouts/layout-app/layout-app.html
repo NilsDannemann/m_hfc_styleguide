@@ -1,0 +1,35 @@
+<template name="layout-app">
+	<!-- layout-app -->
+	<div class="layout-app">
+		<!-- layout-app__header -->
+		<header class="layout-app__header">
+			{{> logo}}
+			{{> Template.dynamic template=header}}
+		</header>
+		<!-- layout-app__main -->
+		<section class="layout-app__main">
+
+			<!-- layout-app__nav -->
+			<nav class="layout-app__nav">
+				layout-app__nav
+				{{> Template.dynamic template=nav}}
+			</nav>
+			<!-- layout-app__content -->
+			<main class="layout-app__content">
+				layout-app__content
+				{{> Template.dynamic template=content}}
+			</main>
+			<!-- layout-app__aside -->
+			<aside class="layout-app__aside">
+				layout-app__aside
+				{{> Template.dynamic template=aside}}
+			</aside>
+
+		</section>
+		<!-- layout-app__footer -->
+		<footer class="layout-app__footer">
+			layout-app__footer
+			{{> Template.dynamic template=footer}}
+		</footer>
+	</div>
+</template>

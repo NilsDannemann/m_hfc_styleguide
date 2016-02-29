@@ -1,0 +1,39 @@
+.layout-app {
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+	
+	// Header & Footer
+	&__header,
+	&__footer {
+		flex: none;
+	}
+	&__header {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		background: #fff;
+		box-shadow: $box-shadow;
+	}
+	&__footer {
+		padding: $whitespace;
+	}
+	// Main (wrapper)
+	&__main {
+		display: flex;
+		flex: 1 0 auto;
+		flex-direction: row;
+	}
+	
+	// Nav & Aside
+	&__nav,
+	&__aside {
+		flex: 0 0 $width-sidebar;
+		padding: $whitespace;
+	}
+	// Content
+	&__content {
+		flex: 1;
+		padding: $whitespace;
+	}
+}
