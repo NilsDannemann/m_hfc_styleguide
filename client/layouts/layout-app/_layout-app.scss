@@ -14,4 +14,9 @@
 	}
 	// For: Full Height
 	&__content {flex: 1 0 auto;}
+
+	&__header {
+		background: #fff;
+		box-shadow: $box-shadow;
+	}
 }

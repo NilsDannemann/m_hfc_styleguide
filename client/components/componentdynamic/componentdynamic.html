@@ -1,0 +1,11 @@
+<template name="componentdynamic">
+	<div class="componentdynamic">
+		{{#if Template.subscriptionsReady}}
+			{{helper}}
+		{{else}}
+			{{> loader_text width=100}}
+			{{> loader_circle}}
+			{{> loader_bar}}
+		{{/if}}
+	</div>
+</template>
