@@ -1,5 +1,5 @@
 Template.logo.events({
-	'click .logo': function() {
+	'click .logo__image': function() {
 		FlowRouter.go('/');
 	}
 });

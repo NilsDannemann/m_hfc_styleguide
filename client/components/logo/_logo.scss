@@ -1,9 +1,8 @@
 .logo {
-	width: $width-sidebar;
 	padding: $whitespace;
-	cursor: pointer;
 
-	&__image {
+	&__image{
 		width: 50px;
+		cursor: pointer;
 	}
 }

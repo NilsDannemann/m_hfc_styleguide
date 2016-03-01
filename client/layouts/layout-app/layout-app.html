@@ -1,35 +1,45 @@
 <template name="layout-app">
 	<!-- layout-app -->
 	<div class="layout-app">
+
 		<!-- layout-app__header -->
 		<header class="layout-app__header">
-			{{> logo}}
-			{{> Template.dynamic template=header}}
-		</header>
-		<!-- layout-app__main -->
-		<section class="layout-app__main">
-
-			<!-- layout-app__nav -->
-			<nav class="layout-app__nav">
-				layout-app__nav
-				{{> Template.dynamic template=nav}}
-			</nav>
-			<!-- layout-app__content -->
-			<main class="layout-app__content">
-				layout-app__content
-				{{> Template.dynamic template=content}}
-			</main>
-			<!-- layout-app__aside -->
-			<aside class="layout-app__aside">
-				layout-app__aside
-				{{> Template.dynamic template=aside}}
+			<aside class="layout-app__header-aside">
+				{{> Template.dynamic template=headerAsideL}}
 			</aside>
+			<main class="layout-app__header-main">
+				{{> Template.dynamic template=headerMain}}
+			</main>
+			<aside class="layout-app__header-aside">
+				{{> Template.dynamic template=headerAsideR}}
+			</aside>
+		</header>
 
+		<!-- layout-app__content -->
+		<section class="layout-app__content">
+			<aside class="layout-app__content-aside">
+				{{> Template.dynamic template=contentAsideL}}
+			</aside>
+			<main class="layout-app__content-main">
+				{{> Template.dynamic template=contentMain}}
+			</main>
+			<aside class="layout-app__content-aside">
+				{{> Template.dynamic template=contentAsideR}}
+			</aside>
 		</section>
+
 		<!-- layout-app__footer -->
 		<footer class="layout-app__footer">
-			layout-app__footer
-			{{> Template.dynamic template=footer}}
+			<aside class="layout-app__footer-aside">
+				{{> Template.dynamic template=footerAsideL}}
+			</aside>
+			<main class="layout-app__footer-main">
+				{{> Template.dynamic template=footerMain}}
+			</main>
+			<aside class="layout-app__footer-aside">
+				{{> Template.dynamic template=footerAsideR}}
+			</aside>
 		</footer>
+
 	</div>
 </template>
