@@ -19,8 +19,8 @@
 	&__content {flex: 1 0 auto;}
 	
 	&__header {
-		background: $color-brand;
-		color: #fff;
+		background: #fff;
+		box-shadow: $box-shadow;
 	}
 
 	@include respond-below(xl) {

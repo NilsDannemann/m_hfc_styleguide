@@ -1,6 +1,8 @@
 <template name="componentdynamic">
 	<div class="componentdynamic">
 		{{#if Template.subscriptionsReady}}
+			<i class="icon-enter-right"></i>
+			<i class="icon-menu"></i>
 			{{helper}}
 		{{else}}
 			{{> loader_text width=100}}
