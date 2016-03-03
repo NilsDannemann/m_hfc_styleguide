@@ -1,31 +1,31 @@
 Template.app.helpers({
-	toggleStateHeaderAsideL: function(){
-		if (Session.get('toggleStateHeaderAsideL') == true) {
+	toggleHeaderAsideL: function(){
+		if (Session.get('toggleHeaderAsideL') == true) {
 			return 'is-toggled'
 		};
 	},
-	toggleStateContentAsideL: function(){
-		if (Session.get('toggleStateContentAsideL') == true) {
+	toggleContentAsideL: function(){
+		if (Session.get('toggleContentAsideL') == true) {
 			return 'is-toggled'
 		};
 	},
-	toggleStateFooterAsideL: function(){
-		if (Session.get('toggleStateFooterAsideL') == true) {
+	toggleFooterAsideL: function(){
+		if (Session.get('toggleFooterAsideL') == true) {
 			return 'is-toggled'
 		};
 	},
-	toggleStateHeaderAsideR: function(){
-		if (Session.get('toggleStateHeaderAsideR') == true) {
+	toggleHeaderAsideR: function(){
+		if (Session.get('toggleHeaderAsideR') == true) {
 			return 'is-toggled'
 		};
 	},
-	toggleStateContentAsideR: function(){
-		if (Session.get('toggleStateContentAsideR') == true) {
+	toggleContentAsideR: function(){
+		if (Session.get('toggleContentAsideR') == true) {
 			return 'is-toggled'
 		};
 	},
-	toggleStateFooterAsideR: function(){
-		if (Session.get('toggleStateFooterAsideR') == true) {
+	toggleFooterAsideR: function(){
+		if (Session.get('toggleFooterAsideR') == true) {
 			return 'is-toggled'
 		};
 	}
@@ -33,13 +33,13 @@ Template.app.helpers({
 
 Template.app.events({
 	'click .icon-enter-left': function(){
-		toggleSession('toggleStateHeaderAsideL');
-		toggleSession('toggleStateContentAsideL');
-		toggleSession('toggleStateFooterAsideL');
+		toggleSession('toggleHeaderAsideL');
+		toggleSession('toggleContentAsideL');
+		toggleSession('toggleFooterAsideL');
 	},
 	'click .icon-enter-right': function(){
-		// toggleSession('toggleStateHeaderAsideR');
-		toggleSession('toggleStateContentAsideR');
-		toggleSession('toggleStateFooterAsideR');
+		// toggleSession('toggleHeaderAsideR');
+		toggleSession('toggleContentAsideR');
+		toggleSession('toggleFooterAsideR');
 	}
 });

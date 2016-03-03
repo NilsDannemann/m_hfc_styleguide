@@ -14,14 +14,15 @@
 			@include transition();
 			flex: 0 0 $width-sidebar;
 		}
-		// State
 		&-aside-l {
+			border-right: $border;
 			&.is-toggled {
 				margin-right: -$width-sidebar;
 				transform: translateX(-$width-sidebar);
 			}
 		}
 		&-aside-r {
+			border-left: $border;
 			&.is-toggled {
 				margin-right: -$width-sidebar;
 				transform: translateX($width-sidebar);
@@ -29,9 +30,8 @@
 		}
 		&-main {flex: 1;}
 	}
-	&__header {
-		background: #fff;
-		box-shadow: $box-shadow;
-	}
+
+	&__header {background: #fff;box-shadow: $box-shadow;}
 	&__content {flex: 1 0 auto;}
+	&__footer {border-top: $border;}
 }
