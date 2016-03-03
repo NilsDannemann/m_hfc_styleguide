@@ -1,4 +1,4 @@
-.layout-app {
+.app {
 	display: flex;
 	height: 100%;
 	flex-direction: column;
@@ -14,26 +14,24 @@
 			@include transition();
 			flex: 0 0 $width-sidebar;
 		}
+		// State
+		&-aside-l {
+			&.is-toggled {
+				margin-right: -$width-sidebar;
+				transform: translateX(-$width-sidebar);
+			}
+		}
+		&-aside-r {
+			&.is-toggled {
+				margin-right: -$width-sidebar;
+				transform: translateX($width-sidebar);
+			}
+		}
 		&-main {flex: 1;}
 	}
-	&__content {flex: 1 0 auto;}
-	
 	&__header {
 		background: #fff;
 		box-shadow: $box-shadow;
 	}
-
-	@include respond-below(xl) {
-		&__content {
-
-			&-aside-l {
-				margin-right: -$width-sidebar;
-				transform: translateX(-$width-sidebar);
-			}
-			&-aside-r {
-				margin-left: -$width-sidebar;
-				transform: translateX($width-sidebar);
-			}
-		}
-	}
+	&__content {flex: 1 0 auto;}
 }
