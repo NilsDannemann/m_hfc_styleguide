@@ -1,6 +1,11 @@
 <template name="workspace">
 	<!-- workspace -->
 	<div class="workspace">
+		
+		<!-- workspace__drawer-l -->
+		<aside class="workspace__drawer-l">
+			{{> Template.dynamic template=headerDrawerL}}
+		</aside>
 
 		<!-- workspace__header -->
 		<header class="workspace__header">
@@ -40,6 +45,11 @@
 				{{> Template.dynamic template=footerAsideR}}
 			</aside>
 		</footer>
+		
+		<!-- workspace__drawer-r -->
+		<aside class="workspace__drawer-r">
+			{{> Template.dynamic template=headerDrawerR}}
+		</aside>
 
 	</div>
 </template>
