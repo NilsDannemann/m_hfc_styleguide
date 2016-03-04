@@ -1,4 +1,4 @@
-.app {
+.workspace {
 	display: flex;
 	height: 100%;
 	flex-direction: column;
@@ -30,7 +30,7 @@
 		}
 		&-main {flex: 1;}
 	}
-	
+
 	// Header
 	&__header {
 		&-aside-l,
@@ -38,19 +38,16 @@
 		&-aside-r {
 			background: #fff;
 			border-bottom: $border;
-			&.is-toggled-down {
+			&.is-expanded {
 				z-index: 10;
 				margin-bottom: calc(-100vh + 91px);
 			}
 		}
 	}
+
 	// Content
-	&__content {
-		flex: 1 0 auto;
-		&-aside-l,
-		&-main,
-		&-aside-r {}
-	}
+	&__content {flex: 1 0 auto;}
+
 	// Footer
 	&__footer {
 		&-aside-l,
@@ -58,7 +55,7 @@
 		&-aside-r {
 			background: #fff;
 			border-top: $border;
-			&.is-toggled-up {
+			&.is-expanded {
 				z-index: 5;
 				margin-top: calc(-100vh + 91px);
 			}

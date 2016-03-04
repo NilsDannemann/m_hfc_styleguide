@@ -1,0 +1,45 @@
+<template name="workspace">
+	<!-- workspace -->
+	<div class="workspace">
+
+		<!-- workspace__header -->
+		<header class="workspace__header">
+			<aside class="workspace__header-aside-l {{toggleHeaderAsideL}}">
+				{{> Template.dynamic template=headerAsideL}}
+			</aside>
+			<main class="workspace__header-main">
+				{{> Template.dynamic template=headerMain}}
+			</main>
+			<aside class="workspace__header-aside-r {{toggleHeaderAsideR}}">
+				{{> Template.dynamic template=headerAsideR}}
+			</aside>
+		</header>
+
+		<!-- workspace__content -->
+		<section class="workspace__content">
+			<aside class="workspace__content-aside-l {{toggleContentAsideL}}">
+				{{> Template.dynamic template=contentAsideL}}
+			</aside>
+			<main class="workspace__content-main">
+				{{> Template.dynamic template=contentMain}}
+			</main>
+			<aside class="workspace__content-aside-r {{toggleContentAsideR}}">
+				{{> Template.dynamic template=contentAsideR}}
+			</aside>
+		</section>
+
+		<!-- workspace__footer -->
+		<footer class="workspace__footer">
+			<aside class="workspace__footer-aside-l {{toggleFooterAsideL}}">
+				{{> Template.dynamic template=footerAsideL}}
+			</aside>
+			<main class="workspace__footer-main">
+				{{> Template.dynamic template=footerMain}}
+			</main>
+			<aside class="workspace__footer-aside-r {{toggleFooterAsideR}}">
+				{{> Template.dynamic template=footerAsideR}}
+			</aside>
+		</footer>
+
+	</div>
+</template>

@@ -1,4 +1,4 @@
-Template.app.helpers({
+Template.workspace.helpers({
 	toggleHeaderAsideL: function(){
 		if (Session.get('toggleHeaderAsideL') == true) {
 			return 'is-toggled'
@@ -31,7 +31,7 @@ Template.app.helpers({
 	}
 });
 
-Template.app.events({
+Template.workspace.events({
 	'click .icon-enter-left': function(){
 		toggleSession('toggleHeaderAsideL');
 		toggleSession('toggleContentAsideL');
