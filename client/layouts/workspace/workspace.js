@@ -1,4 +1,5 @@
 Template.workspace.helpers({
+	// AsideL
 	toggleHeaderAsideL: function(){
 		if (Session.get('toggleHeaderAsideL') == true) {
 			return 'is-toggled'
@@ -14,6 +15,7 @@ Template.workspace.helpers({
 			return 'is-toggled'
 		};
 	},
+	// AsideR
 	toggleHeaderAsideR: function(){
 		if (Session.get('toggleHeaderAsideR') == true) {
 			return 'is-toggled'
