@@ -9,13 +9,13 @@
 
 		<!-- workspace__header -->
 		<header class="workspace__header">
-			<aside class="workspace__header-aside-l {{toggleHeaderAsideL}}">
+			<aside class="workspace__header-aside-l {{toggleHeaderAsideL}} {{expandHeaderAsideL}}">
 				{{> Template.dynamic template=headerAsideL}}
 			</aside>
-			<main class="workspace__header-main">
+			<main class="workspace__header-main {{expandHeaderMain}}">
 				{{> Template.dynamic template=headerMain}}
 			</main>
-			<aside class="workspace__header-aside-r {{toggleHeaderAsideR}}">
+			<aside class="workspace__header-aside-r {{toggleHeaderAsideR}} {{expandHeaderAsideR}}">
 				{{> Template.dynamic template=headerAsideR}}
 			</aside>
 		</header>
@@ -35,13 +35,13 @@
 
 		<!-- workspace__footer -->
 		<footer class="workspace__footer">
-			<aside class="workspace__footer-aside-l {{toggleFooterAsideL}}">
+			<aside class="workspace__footer-aside-l {{toggleFooterAsideL}} {{expandFooterAsideL}}">
 				{{> Template.dynamic template=footerAsideL}}
 			</aside>
-			<main class="workspace__footer-main">
+			<main class="workspace__footer-main {{expandFooterMain}}">
 				{{> Template.dynamic template=footerMain}}
 			</main>
-			<aside class="workspace__footer-aside-r {{toggleFooterAsideR}}">
+			<aside class="workspace__footer-aside-r {{toggleFooterAsideR}} {{expandFooterAsideR}}">
 				{{> Template.dynamic template=footerAsideR}}
 			</aside>
 		</footer>
