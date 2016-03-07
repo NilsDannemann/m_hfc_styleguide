@@ -26,7 +26,6 @@ Template.workspace.helpers({
 	toggleDrawerR: function(){
 		if (Session.get('toggleDrawerR')) return 'is-toggled';
 	},
-
 	// Expand - AsideL
 	expandHeaderAsideL: function(){
 		if (Session.get('expandHeaderAsideL')) return 'is-expanded';
