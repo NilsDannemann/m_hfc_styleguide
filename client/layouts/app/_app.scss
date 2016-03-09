@@ -1,4 +1,4 @@
-.workspace {
+.app {
 	display: flex;
 	height: 100%;
 	flex-direction: column;
@@ -28,7 +28,10 @@
 				transform: translateX($width-sidebar);
 			}
 		}
-		&-main {flex: 1;}
+		&-main {
+			@include transition();
+			flex: 1;
+		}
 	}
 
 	// Header

@@ -1,4 +1,4 @@
-Template.workspace.helpers({
+Template.app.helpers({
 	// Toggle - AsideL
 	toggleHeaderAsideL: function(){
 		if (Session.get('toggleHeaderAsideL')) return 'is-toggled';
@@ -49,40 +49,40 @@ Template.workspace.helpers({
 	},
 });
 
-Template.workspace.events({
+Template.app.events({
 	// Toggle
-	'click .icon-enter-left': function(){
+	'click .js-toggle--aside-l': function(){
 		toggleSession('toggleHeaderAsideL');
 		toggleSession('toggleContentAsideL');
 		toggleSession('toggleFooterAsideL');
 	},
-	'click .icon-enter-right': function(){
+	'click .js-toggle--aside-r': function(){
 		toggleSession('toggleContentAsideR');
 		toggleSession('toggleFooterAsideR');
 	},
-	'click .icon-exit-left': function(){
-		toggleSession('toggleDrawerR');
-	},
-	'click .icon-exit-right': function(){
+	'click .js-toggle--drawer-l': function(){
 		toggleSession('toggleDrawerL');
 	},
+	'click .js-toggle--drawer-r': function(){
+		toggleSession('toggleDrawerR');
+	},
 	// Expand
-	'click .workspace__header-aside-l': function(){
+	'click .app__header-aside-l': function(){
 		toggleSession('expandHeaderAsideL');
 	},
-	'click .workspace__footer-aside-l': function(){
+	'click .app__footer-aside-l': function(){
 		toggleSession('expandFooterAsideL');
 	},
-	'click .workspace__header-aside-r': function(){
+	'click .app__header-aside-r': function(){
 		toggleSession('expandHeaderAsideR');
 	},
-	'click .workspace__footer-aside-r': function(){
+	'click .app__footer-aside-r': function(){
 		toggleSession('expandFooterAsideR');
 	},
-	'click .workspace__header-main': function(){
+	'click .app__header-main': function(){
 		toggleSession('expandHeaderMain');
 	},
-	'click .workspace__footer-main': function(){
+	'click .app__footer-main': function(){
 		toggleSession('expandFooterMain');
 	}
 });

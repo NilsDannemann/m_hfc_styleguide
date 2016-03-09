@@ -1,0 +1,55 @@
+<template name="app">
+	<!-- app -->
+	<div class="app">
+		
+		<!-- app__drawer-l -->
+		<aside class="app__drawer-l {{toggleDrawerL}}">
+			{{> Template.dynamic template=headerDrawerL}}
+		</aside>
+
+		<!-- app__header -->
+		<header class="app__header">
+			<aside class="app__header-aside-l {{toggleHeaderAsideL}} {{expandHeaderAsideL}}">
+				{{> Template.dynamic template=headerAsideL}}
+			</aside>
+			<main class="app__header-main {{expandHeaderMain}}">
+				{{> Template.dynamic template=headerMain}}
+			</main>
+			<aside class="app__header-aside-r {{toggleHeaderAsideR}} {{expandHeaderAsideR}}">
+				{{> Template.dynamic template=headerAsideR}}
+			</aside>
+		</header>
+
+		<!-- app__content -->
+		<section class="app__content">
+			<aside class="app__content-aside-l {{toggleContentAsideL}}">
+				{{> Template.dynamic template=contentAsideL}}
+			</aside>
+			<main class="app__content-main">
+				{{> Template.dynamic template=contentMain}}
+			</main>
+			<aside class="app__content-aside-r {{toggleContentAsideR}}">
+				{{> Template.dynamic template=contentAsideR}}
+			</aside>
+		</section>
+
+		<!-- app__footer -->
+		<footer class="app__footer">
+			<aside class="app__footer-aside-l {{toggleFooterAsideL}} {{expandFooterAsideL}}">
+				{{> Template.dynamic template=footerAsideL}}
+			</aside>
+			<main class="app__footer-main {{expandFooterMain}}">
+				{{> Template.dynamic template=footerMain}}
+			</main>
+			<aside class="app__footer-aside-r {{toggleFooterAsideR}} {{expandFooterAsideR}}">
+				{{> Template.dynamic template=footerAsideR}}
+			</aside>
+		</footer>
+		
+		<!-- app__drawer-r -->
+		<aside class="app__drawer-r {{toggleDrawerR}}">
+			{{> Template.dynamic template=headerDrawerR}}
+		</aside>
+
+	</div>
+</template>
