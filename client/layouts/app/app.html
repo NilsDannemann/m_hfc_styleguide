@@ -3,51 +3,51 @@
 	<div class="app">
 		
 		<!-- app__drawer-l -->
-		<aside class="app__drawer-l {{toggleDrawerL}}">
+		<aside class="app__drawer-l {{DrawerLState}}">
 			{{> Template.dynamic template=headerDrawerL}}
 		</aside>
 
 		<!-- app__header -->
 		<header class="app__header">
-			<aside class="app__header-aside-l {{toggleHeaderAsideL}} {{expandHeaderAsideL}}">
+			<aside class="app__header-aside-l {{headerAsideLState}}">
 				{{> Template.dynamic template=headerAsideL}}
 			</aside>
-			<main class="app__header-main {{expandHeaderMain}}">
+			<main class="app__header-main {{headerMainState}}">
 				{{> Template.dynamic template=headerMain}}
 			</main>
-			<aside class="app__header-aside-r {{toggleHeaderAsideR}} {{expandHeaderAsideR}}">
+			<aside class="app__header-aside-r {{headerAsideRState}}">
 				{{> Template.dynamic template=headerAsideR}}
 			</aside>
 		</header>
 
 		<!-- app__content -->
 		<section class="app__content">
-			<aside class="app__content-aside-l {{toggleContentAsideL}}">
+			<aside class="app__content-aside-l {{contentAsideLState}}">
 				{{> Template.dynamic template=contentAsideL}}
 			</aside>
-			<main class="app__content-main">
+			<main class="app__content-main {{contentMainState}}">
 				{{> Template.dynamic template=contentMain}}
 			</main>
-			<aside class="app__content-aside-r {{toggleContentAsideR}}">
+			<aside class="app__content-aside-r {{contentAsideRState}}">
 				{{> Template.dynamic template=contentAsideR}}
 			</aside>
 		</section>
 
 		<!-- app__footer -->
 		<footer class="app__footer">
-			<aside class="app__footer-aside-l {{toggleFooterAsideL}} {{expandFooterAsideL}}">
+			<aside class="app__footer-aside-l {{footerAsideLState}}">
 				{{> Template.dynamic template=footerAsideL}}
 			</aside>
-			<main class="app__footer-main {{expandFooterMain}}">
+			<main class="app__footer-main {{footerMainState}}">
 				{{> Template.dynamic template=footerMain}}
 			</main>
-			<aside class="app__footer-aside-r {{toggleFooterAsideR}} {{expandFooterAsideR}}">
+			<aside class="app__footer-aside-r {{footerAsideRState}}">
 				{{> Template.dynamic template=footerAsideR}}
 			</aside>
 		</footer>
 		
 		<!-- app__drawer-r -->
-		<aside class="app__drawer-r {{toggleDrawerR}}">
+		<aside class="app__drawer-r {{DrawerRState}}">
 			{{> Template.dynamic template=headerDrawerR}}
 		</aside>
 

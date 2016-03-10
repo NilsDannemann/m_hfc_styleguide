@@ -41,8 +41,8 @@
 		&-aside-r {
 			background: #fff;
 			border-bottom: $border;
+			z-index: 10;
 			&.is-expanded {
-				z-index: 10;
 				margin-bottom: calc(-100vh + (#{$height-toolbar} * 2) + 1px); //+ 1px to account for border
 			}
 		}
@@ -58,8 +58,8 @@
 		&-aside-r {
 			background: #fff;
 			border-top: $border;
+			z-index: 5;
 			&.is-expanded {
-				z-index: 5;
 				margin-top: calc(-100vh + (#{$height-toolbar} * 2) + 1px); //+ 1px to account for border
 			}
 		}
@@ -72,12 +72,12 @@
 		position: absolute;
 		top: 0;
 		height: 100vh;
-		width: $width-sidebar;
+		width: $width-sidebar + $whitespace*2;
 		background: #fff;
 		z-index: 15;
 	}
 	&__drawer-l {
-		transform: translateX(-$width-sidebar);
+		transform: translateX(-($width-sidebar + $whitespace*2));
 		left: 0;
 		&.is-toggled {
 			transform: translateX(0);
@@ -85,7 +85,7 @@
 		}
 	}
 	&__drawer-r {
-		transform: translateX($width-sidebar);
+		transform: translateX($width-sidebar + $whitespace*2);
 		right: 0;
 		&.is-toggled {
 			transform: translateX(0);

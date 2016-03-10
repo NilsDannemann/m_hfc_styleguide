@@ -1,88 +1,132 @@
-Template.app.helpers({
-	// Toggle - AsideL
-	toggleHeaderAsideL: function(){
-		if (Session.get('toggleHeaderAsideL')) return 'is-toggled';
+// Define initial app state
+var props = function() {
+	return {
+		toggled: false,
+		expanded: false
+	};
+};
+var app = {
+	header: {
+		asideL: props(),
+		main: props(),
+		asideR: props()
 	},
-	toggleContentAsideL: function(){
-		if (Session.get('toggleContentAsideL')) return 'is-toggled';
+	content: {
+		asideL: props(),
+		main: props(),
+		asideR: props()
 	},
-	toggleFooterAsideL: function(){
-		if (Session.get('toggleFooterAsideL')) return 'is-toggled';
+	footer: {
+		asideL: props(),
+		main: props(),
+		asideR: props()
 	},
-	// Toggle - AsideR
-	toggleHeaderAsideR: function(){
-		if (Session.get('toggleHeaderAsideR')) return 'is-toggled';
-	},
-	toggleContentAsideR: function(){
-		if (Session.get('toggleContentAsideR')) return 'is-toggled';
-	},
-	toggleFooterAsideR: function(){
-		if (Session.get('toggleFooterAsideR')) return 'is-toggled';
-	},
-	// Toggle - Drawer
-	toggleDrawerL: function(){
-		if (Session.get('toggleDrawerL')) return 'is-toggled';
-	},
-	toggleDrawerR: function(){
-		if (Session.get('toggleDrawerR')) return 'is-toggled';
-	},
-	// Expand - AsideL
-	expandHeaderAsideL: function(){
-		if (Session.get('expandHeaderAsideL')) return 'is-expanded';
-	},
-	expandFooterAsideL: function(){
-		if (Session.get('expandFooterAsideL')) return 'is-expanded';
-	},
-	// Expand - AsideR
-	expandHeaderAsideR: function(){
-		if (Session.get('expandHeaderAsideR')) return 'is-expanded';
-	},
-	expandFooterAsideR: function(){
-		if (Session.get('expandFooterAsideR')) return 'is-expanded';
-	},
-	// Expand - Main
-	expandHeaderMain: function(){
-		if (Session.get('expandHeaderMain')) return 'is-expanded';
-	},
-	expandFooterMain: function(){
-		if (Session.get('expandFooterMain')) return 'is-expanded';
-	},
+	drawerL: props(),
+	drawerR: props()
+};
+
+// Set initial app state
+Template.app.onCreated(function () {
+	Session.set('app', app);
 });
 
+
+// Helpers
+Template.app.helpers({
+	// Header
+	headerAsideLState: function(){
+		if (Session.get('app').header.asideL.toggled) return 'is-toggled';
+		if (Session.get('app').header.asideL.expanded) return 'is-expanded';
+	},
+	headerMainState: function(){
+		if (Session.get('app').header.main.toggled) return 'is-toggled';
+		if (Session.get('app').header.main.expanded) return 'is-expanded';
+	},
+	headerAsideRState: function(){
+		if (Session.get('app').header.asideR.toggled) return 'is-toggled';
+		if (Session.get('app').header.asideR.expanded) return 'is-expanded';
+	},
+	// Content
+	contentAsideLState: function(){
+		if (Session.get('app').content.asideL.toggled) return 'is-toggled';
+	},
+	contentMainState: function(){
+		if (Session.get('app').content.main.toggled) return 'is-toggled';
+	},
+	contentAsideRState: function(){
+		if (Session.get('app').content.asideR.toggled) return 'is-toggled';
+	},
+	// Footer
+	footerAsideLState: function(){
+		if (Session.get('app').footer.asideL.toggled) return 'is-toggled';
+		if (Session.get('app').footer.asideL.expanded) return 'is-expanded';
+	},
+	footerMainState: function(){
+		if (Session.get('app').footer.main.toggled) return 'is-toggled';
+		if (Session.get('app').footer.main.expanded) return 'is-expanded';
+	},
+	footerAsideRState: function(){
+		if (Session.get('app').footer.asideR.toggled) return 'is-toggled';
+		if (Session.get('app').footer.asideR.expanded) return 'is-expanded';
+	},
+	// Drawer
+	DrawerLState: function(){
+		if (Session.get('app').drawerL.toggled) return 'is-toggled';
+	},
+	DrawerRState: function(){
+		if (Session.get('app').drawerR.toggled) return 'is-toggled';
+	}
+});
+
+
+
+
+
+// Events
 Template.app.events({
 	// Toggle
 	'click .js-toggle--aside-l': function(){
-		toggleSession('toggleHeaderAsideL');
-		toggleSession('toggleContentAsideL');
-		toggleSession('toggleFooterAsideL');
+		app.header.asideL.toggled = !app.header.asideL.toggled;
+		app.content.asideL.toggled = !app.content.asideL.toggled;
+		app.footer.asideL.toggled = !app.footer.asideL.toggled;
+		Session.set('app', app);
 	},
 	'click .js-toggle--aside-r': function(){
-		toggleSession('toggleContentAsideR');
-		toggleSession('toggleFooterAsideR');
+		app.content.asideR.toggled = !app.content.asideR.toggled;
+		app.footer.asideR.toggled = !app.footer.asideR.toggled;
+		Session.set('app', app);
 	},
 	'click .js-toggle--drawer-l': function(){
-		toggleSession('toggleDrawerL');
+		app.drawerL.toggled = !app.drawerL.toggled;
+		Session.set('app', app);
 	},
 	'click .js-toggle--drawer-r': function(){
-		toggleSession('toggleDrawerR');
+		app.drawerR.toggled = !app.drawerR.toggled;
+		Session.set('app', app);
 	},
 	// Expand
 	'click .app__header-aside-l': function(){
-		toggleSession('expandHeaderAsideL');
-	},
-	'click .app__footer-aside-l': function(){
-		toggleSession('expandFooterAsideL');
-	},
-	'click .app__header-aside-r': function(){
-		toggleSession('expandHeaderAsideR');
-	},
-	'click .app__footer-aside-r': function(){
-		toggleSession('expandFooterAsideR');
+		app.header.asideL.expanded = !app.header.asideL.expanded;
+		Session.set('app', app);
 	},
 	'click .app__header-main': function(){
-		toggleSession('expandHeaderMain');
+		app.header.main.expanded = !app.header.main.expanded;
+		Session.set('app', app);
+	},
+	'click .app__header-aside-r': function(){
+		app.header.asideR.expanded = !app.header.asideR.expanded;
+		Session.set('app', app);
+	},
+	'click .app__footer-aside-l': function(){
+		app.footer.asideL.expanded = !app.footer.asideL.expanded;
+		Session.set('app', app);
 	},
 	'click .app__footer-main': function(){
-		toggleSession('expandFooterMain');
+		app.footer.main.expanded = !app.footer.main.expanded;
+		Session.set('app', app);
+	},
+	'click .app__footer-aside-r': function(){
+		app.footer.asideR.expanded = !app.footer.asideR.expanded;
+		Session.set('app', app);
 	}
 });
