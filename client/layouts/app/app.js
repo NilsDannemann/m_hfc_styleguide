@@ -50,9 +50,6 @@ Template.app.helpers({
 	contentAsideLState: function(){
 		if (Session.get('app').content.asideL.toggled) return 'is-toggled';
 	},
-	contentMainState: function(){
-		if (Session.get('app').content.main.toggled) return 'is-toggled';
-	},
 	contentAsideRState: function(){
 		if (Session.get('app').content.asideR.toggled) return 'is-toggled';
 	},

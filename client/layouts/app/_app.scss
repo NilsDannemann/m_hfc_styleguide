@@ -34,7 +34,6 @@
 		}
 	}
 
-	// Header
 	&__header {
 		&-aside-l,
 		&-main,
@@ -48,10 +47,10 @@
 		}
 	}
 	
-	// Content
-	&__content {flex: 1 0 auto;}
+	&__content {
+		flex: 1 0 auto;
+	}
 
-	// Footer
 	&__footer {
 		&-aside-l,
 		&-main,
@@ -65,7 +64,6 @@
 		}
 	}
 
-	// Drawer
 	&__drawer-l,
 	&__drawer-r {
 		@include transition();
