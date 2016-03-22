@@ -25,6 +25,7 @@ var app = {
 	drawerR: props()
 };
 
+
 // Set initial app state
 Template.app.onCreated(function () {
 	Session.set('app', app);
@@ -76,14 +77,10 @@ Template.app.helpers({
 });
 
 
-
-
-
 // Events
 Template.app.events({
 	// Toggle
 	'click .js-toggle--aside-l': function(){
-		app.header.asideL.toggled = !app.header.asideL.toggled;
 		app.content.asideL.toggled = !app.content.asideL.toggled;
 		app.footer.asideL.toggled = !app.footer.asideL.toggled;
 		Session.set('app', app);

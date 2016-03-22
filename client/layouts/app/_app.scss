@@ -3,18 +3,17 @@
 	height: 100%;
 	flex-direction: column;
 	
+
+	// HEADER/CONTENT/FOOTER
 	&__header,
 	&__content,
 	&__footer {
 		display: flex;
 		flex: none;
 
-		&-aside-l,
-		&-aside-r {
+		&-aside-l {
 			@include transition();
 			flex: 0 0 $width-sidebar;
-		}
-		&-aside-l {
 			border-right: $border;
 			&.is-toggled {
 				margin-right: -$width-sidebar;
@@ -22,6 +21,8 @@
 			}
 		}
 		&-aside-r {
+			@include transition();
+			flex: 0 0 $width-sidebar;
 			border-left: $border;
 			&.is-toggled {
 				margin-right: -$width-sidebar;
@@ -33,12 +34,15 @@
 			flex: 1;
 		}
 	}
+	
 
+	// HEADER
 	&__header {
 		&-aside-l,
 		&-main,
 		&-aside-r {
-			background: #fff;
+			color: #fff;
+			background: $color-spaceblack;
 			border-bottom: $border;
 			z-index: 10;
 			&.is-expanded {
@@ -47,10 +51,19 @@
 		}
 	}
 	
+
+	// CONTENT
 	&__content {
 		flex: 1 0 auto;
+
+		&-aside-l {
+			color: #fff;
+			background: $color-spaceblack;
+		}
 	}
 
+
+	// FOOTER
 	&__footer {
 		&-aside-l,
 		&-main,
@@ -62,8 +75,14 @@
 				margin-top: calc(-100vh + (#{$height-toolbar} * 2) + 1px); //+ 1px to account for border
 			}
 		}
+		&-aside-l {
+			color: #fff;
+			background: $color-spaceblack;
+		}
 	}
+	
 
+	// DRAWER
 	&__drawer-l,
 	&__drawer-r {
 		@include transition();
