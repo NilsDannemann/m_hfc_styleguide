@@ -87,7 +87,6 @@
 		&-main,
 		&-aside-r {
 			@include transition();
-			background: #fff;
 			border-top: $border;
 			z-index: 5;
 			&.is-expanded {

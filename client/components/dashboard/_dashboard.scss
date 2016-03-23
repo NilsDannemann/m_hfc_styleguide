@@ -2,6 +2,7 @@
 	background: #fff;
 	margin: $whitespace;
 	padding: $whitespace;
-	border: $border;
+	box-shadow: $box-shadow;
+	border-radius: $border-radius;
 	overflow: hidden;
 }

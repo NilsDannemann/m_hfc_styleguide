@@ -1,0 +1,41 @@
+.nav {
+	display: block;
+	list-style-type: none;
+	padding: 0;
+
+	&__title {
+		color: lighten($color-spaceblack, 20%);
+		font-size: $font-size;
+		margin-top: $whitespace;
+		padding: ($whitespace / 4) $whitespace;
+		text-transform: uppercase;
+	}
+
+	&__icon {
+		@include transition();
+		display: flex;
+		align-items: center;
+		height: ($whitespace * 2);
+		width: ($whitespace * 2);
+		color: lighten($color-spaceblack, 20%);
+		background: lighten($color-spaceblack, 3%);
+		margin-right: ($whitespace / 2);
+		padding: ($whitespace / 2);
+		border-radius: $border-radius;
+		box-shadow: $box-shadow;
+
+		&:hover {
+			color: lighten($color-spaceblack, 27%);
+			background: lighten($color-spaceblack, 10%);
+		}
+	}
+	
+	&__item {
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+		color: lighten($color-spaceblack, 50%);
+		padding: 0 $whitespace;
+		margin-bottom: ($whitespace / 2);
+	}
+}
