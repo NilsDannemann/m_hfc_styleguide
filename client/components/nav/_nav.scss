@@ -7,20 +7,17 @@
 		color: lighten($color-spaceblack, 20%);
 		font-size: $font-size;
 		margin-top: $whitespace;
-		padding: ($whitespace / 4) $whitespace;
+		padding: 0 $whitespace;
 		text-transform: uppercase;
 	}
 
 	&__icon {
 		@include transition();
-		display: flex;
-		align-items: center;
-		height: ($whitespace * 2);
-		width: ($whitespace * 2);
+		height: ($whitespace * 1.25);
+		width: ($whitespace * 1.25);
 		color: lighten($color-spaceblack, 20%);
 		background: lighten($color-spaceblack, 3%);
 		margin-right: ($whitespace / 2);
-		padding: ($whitespace / 2);
 		border-radius: $border-radius;
 		box-shadow: $box-shadow;
 
