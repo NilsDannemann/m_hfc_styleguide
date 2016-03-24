@@ -1,0 +1,42 @@
+.titlebar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: #fff;
+	padding: $whitespace;
+	border-bottom: $border;
+	height: ($whitespace * 5);
+
+	&__title {
+		margin-bottom: 0;
+		
+		i {
+			border: $border;
+			padding: ($whitespace / 2);
+			margin-right: ($whitespace / 2);
+		}
+
+		span {
+			color: lighten($color-headline, 35%);
+		}
+	}
+}
+
+.controls {
+	display: flex;
+	align-items: center;
+
+	&__section {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: ($whitespace * 4);
+		padding: ($whitespace * 0.75);
+	}
+	&__icon {
+		margin-bottom: ($whitespace / 2);
+	}
+	&__link {
+
+	}
+}

@@ -1,0 +1,25 @@
+<template name="titlebar">
+	<div class="titlebar">
+		<h1 class="titlebar__title">
+			<i class="titlebar__icon icon icon-files"></i> App Name <span>- Nav Item</span>
+		</h1>
+		{{> controls}}
+	</div>
+</template>
+
+<template name="controls">
+	<div class="controls">
+		<div class="controls__section">
+			<i class="controls__icon icon icon-icons2"></i>
+			<a href="controls__link">Home</a>
+		</div>
+		<div class="controls__section">
+			<i class="controls__icon icon icon-list"></i>
+			<a href="controls__link">Filter</a>
+		</div>
+		<div class="controls__section">
+			<i class="controls__icon icon icon-equalizer"></i>
+			<a href="controls__link">Settings</a>
+		</div>
+	</div>
+</template>

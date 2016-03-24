@@ -40,7 +40,7 @@ $color-brand: $color-spaceblack;
 /* =======================================*/
 
 $whitespace			: 20px;
-$width-sidebar		: 225px;
+$width-sidebar		: 250px;
 $height-toolbar		: $whitespace*2.25;
 $global-border-box  : true;		// true or false
 $devmode-overlay	: false; 	// true or false
@@ -80,6 +80,7 @@ $font-size		: 13px;
 $line-height	: 1.6;
 $color-headline	: $color-black;
 $color-text		: lighten($color-black, 5%);
+$color-icons	: lighten($color-black, 35%);
 
 
 /* =======================================*/
