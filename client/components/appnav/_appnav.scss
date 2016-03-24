@@ -29,19 +29,18 @@
 		margin-right: ($whitespace / 2);
 		border-radius: $border-radius;
 		box-shadow: $box-shadow;
-
-		&:hover {
-			color: lighten($color-spaceblack, 27%);
-			background: lighten($color-spaceblack, 10%);
-		}
 	}
 	
 	&__item {
+		@include transition();
 		display: flex;
 		align-items: center;
 		cursor: pointer;
 		color: lighten($color-spaceblack, 50%);
-		padding: 0 $whitespace;
-		margin-bottom: ($whitespace / 2);
+		padding: ($whitespace * 0.25) $whitespace;
+
+		&:hover {
+			background: darken($color-spaceblack, 3%);
+		}
 	}
 }

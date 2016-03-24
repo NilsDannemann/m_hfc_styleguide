@@ -9,9 +9,11 @@
 // Layout
 @import '{}/client/layouts/app/app';
 
-// Components
+// Base
 @import '{}/client/components/logo/logo';
 @import '{}/client/components/loader/loader';
+
+// App
 @import '{}/client/components/appnav/appnav';
 @import '{}/client/components/appswitcher/appswitcher';
 @import '{}/client/components/appheader/appheader';
