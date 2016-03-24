@@ -1,0 +1,8 @@
+.appswitcher {
+	margin: $whitespace;
+	padding: $whitespace;
+	color: lighten($color-spaceblack, 50%);
+	background: lighten($color-spaceblack, 3%);
+	border-radius: $border-radius;
+	box-shadow: $box-shadow;
+}

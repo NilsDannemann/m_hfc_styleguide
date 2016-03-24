@@ -1,0 +1,19 @@
+.appcontrols {
+	display: flex;
+	align-items: center;
+
+	&__section {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: ($whitespace * 4);
+		padding: ($whitespace * 0.75);
+	}
+	&__icon {
+		margin-bottom: ($whitespace / 2);
+	}
+	&__link {
+		color: $color-black;
+		font-weight: 500;
+	}
+}

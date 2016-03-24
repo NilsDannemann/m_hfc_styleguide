@@ -1,0 +1,32 @@
+<template name="appnav">
+	{{> appswitcher}}
+	
+	<ul class="appnav">
+		<h3 class="appnav__title">Section Title</h3>
+		{{> appnav__item}}
+		{{> appnav__item}}
+		{{> appnav__item}}
+		{{> appnav__item}}
+		{{> appnav__item}}
+	</ul>
+	<ul class="appnav">
+		<h3 class="appnav__title">Section Title</h3>
+		{{> appnav__item}}
+		{{> appnav__item}}
+		{{> appnav__item}}
+		{{> appnav__item}}
+	</ul>
+	<ul class="appnav">
+		<h3 class="appnav__title">Section Title</h3>
+		{{> appnav__item}}
+		{{> appnav__item}}
+		{{> appnav__item}}
+	</ul>
+</template>
+
+<template name="appnav__item">
+	<li class="appnav__item">
+		<span class="appnav__icon"></span>
+		Appnav Item
+	</li>
+</template>

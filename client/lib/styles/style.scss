@@ -12,10 +12,14 @@
 // Components
 @import '{}/client/components/logo/logo';
 @import '{}/client/components/loader/loader';
-@import '{}/client/components/nav/nav';
+@import '{}/client/components/appnav/appnav';
+@import '{}/client/components/appswitcher/appswitcher';
+@import '{}/client/components/appheader/appheader';
+@import '{}/client/components/appcontrols/appcontrols';
+@import '{}/client/components/appbar/appbar';
+
+// Pages
 @import '{}/client/components/dashboard/dashboard';
-@import '{}/client/components/titlebar/titlebar';
-@import '{}/client/components/settingsbar/settingsbar';
 
 // Placeholder Components
 @import '{}/client/components/componentdynamic/componentdynamic';
