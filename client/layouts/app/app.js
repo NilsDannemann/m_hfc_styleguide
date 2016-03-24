@@ -81,45 +81,55 @@ Template.app.helpers({
 Template.app.events({
 	// Toggle
 	'click .js-toggle--aside-l': function(){
+		var app = Session.get('app');
 		app.content.asideL.toggled = !app.content.asideL.toggled;
 		app.footer.asideL.toggled = !app.footer.asideL.toggled;
 		Session.set('app', app);
 	},
 	'click .js-toggle--aside-r': function(){
+		var app = Session.get('app');
 		app.content.asideR.toggled = !app.content.asideR.toggled;
 		app.footer.asideR.toggled = !app.footer.asideR.toggled;
 		Session.set('app', app);
 	},
 	'click .js-toggle--drawer-l': function(){
+		var app = Session.get('app');
 		app.drawerL.toggled = !app.drawerL.toggled;
 		Session.set('app', app);
 	},
 	'click .js-toggle--drawer-r': function(){
+		var app = Session.get('app');
 		app.drawerR.toggled = !app.drawerR.toggled;
 		Session.set('app', app);
 	},
 	// Expand
 	'click .app__header-aside-l': function(){
+		var app = Session.get('app');
 		app.header.asideL.expanded = !app.header.asideL.expanded;
 		Session.set('app', app);
 	},
 	'click .app__header-main': function(){
+		var app = Session.get('app');
 		app.header.main.expanded = !app.header.main.expanded;
 		Session.set('app', app);
 	},
 	'click .app__header-aside-r': function(){
+		var app = Session.get('app');
 		app.header.asideR.expanded = !app.header.asideR.expanded;
 		Session.set('app', app);
 	},
 	'click .app__footer-aside-l': function(){
+		var app = Session.get('app');
 		app.footer.asideL.expanded = !app.footer.asideL.expanded;
 		Session.set('app', app);
 	},
 	'click .app__footer-main': function(){
+		var app = Session.get('app');
 		app.footer.main.expanded = !app.footer.main.expanded;
 		Session.set('app', app);
 	},
 	'click .app__footer-aside-r': function(){
+		var app = Session.get('app');
 		app.footer.asideR.expanded = !app.footer.asideR.expanded;
 		Session.set('app', app);
 	}
