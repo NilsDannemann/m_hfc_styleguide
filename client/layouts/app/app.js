@@ -19,7 +19,6 @@ var app = {
 	drawerR: 	{toggled: false}
 };
 
-
 // Set initial app state
 Template.app.onCreated(function () {
 	Session.set('app', app);

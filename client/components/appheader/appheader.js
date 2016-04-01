@@ -10,6 +10,6 @@ Template.appheader.helpers({
 });
 Template.appheader.events({
 	'click .js-toggle-navigation': function(){
-		functions.toggleAsideL();
+		functions.toggleLayout('asideL');
 	}
 });

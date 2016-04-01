@@ -1,11 +1,15 @@
-// Toggle App Layout
-export function toggleAsideL() {
-	var props = function() {
-		return 'app.content.asideL.toggled';
-	};
-
-	var app = Session.get('app');
-	app.content.asideL.toggled = !app.content.asideL.toggled;
-	app.footer.asideL.toggled = !app.footer.asideL.toggled;
+// Toggle Layout Function
+// Usage: toggleLayout('asideR');
+export function toggleLayout(area) {
+	let app = Session.get('app');
+	
+	app.content[area].toggled = !app.content[area].toggled;
+	app.footer[area].toggled = !app.footer[area].toggled;
 	Session.set('app', app);
 }
+
+// Toggle Session Function
+// Usage: toggleSession('mysession');
+export function toggleSession(session){
+	(Session.get(session)) ? Session.set(session, false) : Session.set(session, true);
+};
