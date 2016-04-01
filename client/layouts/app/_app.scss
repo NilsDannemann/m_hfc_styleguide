@@ -17,9 +17,6 @@
 			background: $color-spaceblack;
 			border-bottom: $border;
 			z-index: 10;
-			&.is-expanded {
-				margin-bottom: calc(-100vh + (#{$height-toolbar} * 2) + 1px); //+ 1px to account for border
-			}
 		}
 		&-aside-l {
 			flex: 0 0 $width-sidebar;
@@ -89,9 +86,6 @@
 			@include transition();
 			border-top: $border;
 			z-index: 5;
-			&.is-expanded {
-				margin-top: calc(-100vh + (#{$height-toolbar} * 2) + 1px); //+ 1px to account for border
-			}
 		}
 		&-aside-l {
 			flex: 0 0 $width-sidebar;
