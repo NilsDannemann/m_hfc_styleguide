@@ -1,5 +1,4 @@
 // Toggle Layout Function
-// Usage: toggleLayout('asideR');
 export function toggleLayout(area) {
 	let app = Session.get('app');
 	
@@ -9,7 +8,6 @@ export function toggleLayout(area) {
 }
 
 // Toggle Session Function
-// Usage: toggleSession('mysession');
 export function toggleSession(session){
 	(Session.get(session)) ? Session.set(session, false) : Session.set(session, true);
 };
