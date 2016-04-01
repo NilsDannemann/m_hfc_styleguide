@@ -1,7 +1,12 @@
 <template name="appheader">
 	<div class="appheader">
 		<h1 class="appheader__title">
-			<i class="appheader__icon icon icon-files"></i> App Name <span>- Nav Item</span>
+			{{#if navigationToggled}}
+				<i class="appheader__icon icon icon-indent-increase js-toggle-navigation"></i> App Name
+			{{else}}
+				<i class="appheader__icon icon icon-indent-decrease js-toggle-navigation"></i> App Name
+			{{/if}}
+			<span class="appheader__span"> - Nav Item</span>
 		</h1>
 		{{> appcontrols}}
 	</div>

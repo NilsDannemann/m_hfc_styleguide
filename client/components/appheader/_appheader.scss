@@ -9,16 +9,15 @@
 
 	&__title {
 		margin-bottom: 0;
-		
-		i {
-			border: $border;
-			padding: ($whitespace / 2);
-			margin-right: ($whitespace / 2);
-		}
-
-		span {
-			color: lighten($color-headline, 35%);
-			font-weight: 200;
-		}
+	}
+	&__icon {
+		cursor: pointer;
+		border: $border;
+		padding: ($whitespace / 2);
+		margin-right: ($whitespace / 2);
+	}
+	&__span {
+		color: lighten($color-headline, 35%);
+		font-weight: 200;
 	}
 }

@@ -63,31 +63,3 @@ Template.app.helpers({
 		if (Session.get('app').drawerR.toggled) return 'is-toggled';
 	}
 });
-
-
-// Events
-Template.app.events({
-	// Toggle
-	'click .js-toggle--aside-l': function(){
-		var app = Session.get('app');
-		app.content.asideL.toggled = !app.content.asideL.toggled;
-		app.footer.asideL.toggled = !app.footer.asideL.toggled;
-		Session.set('app', app);
-	},
-	'click .js-toggle--aside-r': function(){
-		var app = Session.get('app');
-		app.content.asideR.toggled = !app.content.asideR.toggled;
-		app.footer.asideR.toggled = !app.footer.asideR.toggled;
-		Session.set('app', app);
-	},
-	'click .js-toggle--drawer-l': function(){
-		var app = Session.get('app');
-		app.drawerL.toggled = !app.drawerL.toggled;
-		Session.set('app', app);
-	},
-	'click .js-toggle--drawer-r': function(){
-		var app = Session.get('app');
-		app.drawerR.toggled = !app.drawerR.toggled;
-		Session.set('app', app);
-	}
-});
