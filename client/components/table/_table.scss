@@ -545,45 +545,6 @@ table.dataTable td {
     height: 0
 }
 
-
-
-
-
-
-
-
-
-/* =======================================*/
-/* 
-/* =RESPONSIVE
-/* 
-/* =======================================*/
-@include respond-below(l) {
-    .dataTables_wrapper .dataTables_info {
-        padding-top: $whitespace/4;
-    }
-    .dataTables_wrapper .dataTables_info,
-    .dataTables_wrapper .dataTables_paginate {
-        width: 100%;
-        display: flex;
-
-        span {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-        }
-    }    
-    div.dtr-modal div.dtr-modal-display {
-        width: 95%
-    }
-}
-@include respond-below(m) {
-    .dataTables_wrapper .dataTables_filter {
-        margin-top: 0;
-    }
-}
-
-
 table.dataTable.dtr-inline.collapsed>tbody>tr>td.child,
 table.dataTable.dtr-inline.collapsed>tbody>tr>th.child,
 table.dataTable.dtr-inline.collapsed>tbody>tr>td.dataTables_empty {
