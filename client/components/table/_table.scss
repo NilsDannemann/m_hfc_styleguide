@@ -1,9 +1,9 @@
 table.dataTable {
     width: 100%;
-    margin: 0 auto;
+    margin: 0 auto !important;
     clear: both;
     border-collapse: separate;
-    border-spacing: 0
+    border-spacing: 0;
 }
 
 table.dataTable thead th,
@@ -54,6 +54,8 @@ table.dataTable thead .sorting_desc_disabled {
 		font-family: FontAwesome;
 		float: right;
 		font-size: 10px;
+        color: #bbb;
+        opacity: 1;
 	}
 }
 
@@ -120,7 +122,7 @@ table.dataTable.display tbody tr:first-child td {
 
 table.dataTable.cell-border tbody th,
 table.dataTable.cell-border tbody td {
-    border-top: $border;
+    border-bottom: $border;
     border-right: $border;
 }
 
@@ -279,7 +281,7 @@ table.dataTable.nowrap td {
 // =COMPACT
 table.dataTable.compact thead th,
 table.dataTable.compact thead td {
-    padding: 4px 4px 4px 0px;
+    padding: 0px 0px 6px 0px;
 }
 
 table.dataTable.compact tfoot th,
@@ -422,7 +424,7 @@ table.dataTable td {
 .dataTables_wrapper .dataTables_filter input {
     margin-left: $whitespace/2;
     margin-bottom: $whitespace;
-    padding: $whitespace/2 $whitespace/4;
+    padding: $whitespace/4 $whitespace/4;
     border: $border;
     font-size: $font-size;
     color: $color-black;
