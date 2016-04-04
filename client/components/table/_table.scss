@@ -55,7 +55,9 @@ table.dataTable thead .sorting_desc_disabled {
 		float: right;
 		font-size: 10px;
         color: #bbb;
-        opacity: 1;
+        top: 2px;
+        right: 10px;
+        position: relative;
 	}
 }
 

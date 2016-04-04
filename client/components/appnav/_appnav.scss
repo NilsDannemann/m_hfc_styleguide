@@ -21,7 +21,6 @@
 	}
 
 	&__icon {
-		@include transition();
 		height: ($whitespace * 1.25);
 		width: ($whitespace * 1.25);
 		color: lighten($color-spaceblack, 20%);
@@ -32,7 +31,6 @@
 	}
 	
 	&__item {
-		@include transition();
 		display: flex;
 		align-items: center;
 		cursor: pointer;
