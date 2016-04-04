@@ -6,6 +6,24 @@ Meteor.startup(function() {
 		},
 		field2: function() {
 			return faker.hacker.verb();
+		},
+		field3: function() {
+			return faker.hacker.verb();
+		},
+		field4: function() {
+			return faker.hacker.verb();
+		},
+		field5: function() {
+			return faker.hacker.verb();
+		},
+		field6: function() {
+			return faker.hacker.verb();
+		},
+		field7: function() {
+			return faker.hacker.verb();
+		},
+		field8: function() {
+			return faker.hacker.verb();
 		}
 	});
 
